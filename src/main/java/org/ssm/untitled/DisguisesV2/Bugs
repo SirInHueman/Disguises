@@ -1,0 +1,8 @@
+[?] Disguise Owner dying will leave Disguise behind with no death animation.
+[?] Disguise Owner respawning will leave the Disguise where it was upon death, and they will be massively desynced until jump
+[?] Everything should be passed through Disguise Context (eg; handleMovement should be a part of DisguiseContext, so that
+[?] certain Contexts, like PhantomContext, could override it and properly fix it) (Phantom's pitch is inverted)
+[?] Dying will cause other players to unload for the person who died.
+[?] Mobs don't load facing the right direction.
+[?] Hitting Disguise Owners will cause the mob to shake even if they are in creative.
+[?] Disguise can be hit multiple times to play the sound multiple times.

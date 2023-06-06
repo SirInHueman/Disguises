@@ -1,0 +1,9 @@
+name: SuperSmashMobsUltimate
+version: '${project.version}'
+main: org.ssm.untitled.SuperSmashMobsUltimate
+api-version: 1.19
+depend: [ProtocolLib]
+commands:
+  mob:
+    usage: /mob
+    description: WE MOBBIN

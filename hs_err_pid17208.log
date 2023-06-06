@@ -1,0 +1,219 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3557), pid=17208, tid=24044
+#
+# JRE version:  (17.0.6+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.6+10-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dmaven.multiModuleProjectDirectory=C:\Users\adamj\Desktop\MINECRAFTING\untitled -Djansi.passthrough=true -Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\maven\lib\maven3 -Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\maven\lib\maven3\bin\m2.conf -Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\maven\lib\maven-event-listener.jar -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\lib\idea_rt.jar=54340:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\bin -Dfile.encoding=UTF-8 org.codehaus.classworlds.Launcher -Didea.version=2023.1 package
+
+Host: 13th Gen Intel(R) Core(TM) i7-13700K, 24 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2913)
+Time: Fri May 26 15:47:05 2023 Eastern Daylight Time elapsed time: 0.007038 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001a44e4e57e0):  JavaThread "Unknown thread" [_thread_in_vm, id=24044, stack(0x0000009a73e00000,0x0000009a73f00000)]
+
+Stack: [0x0000009a73e00000,0x0000009a73f00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x64b39a]
+V  [jvm.dll+0x7ff044]
+V  [jvm.dll+0x8007fe]
+V  [jvm.dll+0x800e53]
+V  [jvm.dll+0x235848]
+V  [jvm.dll+0x6482fa]
+V  [jvm.dll+0x63ca0a]
+V  [jvm.dll+0x2f3d59]
+V  [jvm.dll+0x2faee6]
+V  [jvm.dll+0x34755a]
+V  [jvm.dll+0x34779f]
+V  [jvm.dll+0x2ca128]
+V  [jvm.dll+0x2cb0b9]
+V  [jvm.dll+0x7d2751]
+V  [jvm.dll+0x354a21]
+V  [jvm.dll+0x7b2c9e]
+V  [jvm.dll+0x3d16c3]
+V  [jvm.dll+0x3d30c1]
+C  [jli.dll+0x519f]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe0a63b858, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001a44e552600 GCTaskThread "GC Thread#0" [stack: 0x0000009a73f00000,0x0000009a74000000] [id=19904]
+  0x000001a44e501f00 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000009a74000000,0x0000009a74100000] [id=24624]
+  0x000001a44e563680 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000009a74100000,0x0000009a74200000] [id=30240]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe09e2b387]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001a44e4e0470] Heap_lock - owner thread: 0x000001a44e4e57e0
+
+Heap address: 0x0000000704c00000, size: 4020 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000704c00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe0a1f2dd9]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.003 Loaded shared library C:\Users\adamj\.jdks\corretto-17.0.6\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6fc3c0000 - 0x00007ff6fc3cd000 	C:\Users\adamj\.jdks\corretto-17.0.6\bin\java.exe
+0x00007ffeb0c30000 - 0x00007ffeb0e28000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffeaecf0000 - 0x00007ffeaedaf000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffeae5c0000 - 0x00007ffeae8b6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffeae8c0000 - 0x00007ffeae9c0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe808d0000 - 0x00007ffe808e5000 	C:\Users\adamj\.jdks\corretto-17.0.6\bin\VCRUNTIME140.dll
+0x00007ffe808f0000 - 0x00007ffe80907000 	C:\Users\adamj\.jdks\corretto-17.0.6\bin\jli.dll
+0x00007ffeaedd0000 - 0x00007ffeaef6d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffeaec60000 - 0x00007ffeaec82000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffeaf2f0000 - 0x00007ffeaf31c000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffea1510000 - 0x00007ffea17aa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffeae4a0000 - 0x00007ffeae5b5000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffeaebc0000 - 0x00007ffeaec5d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffeaf420000 - 0x00007ffeaf4be000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffeb0370000 - 0x00007ffeb03a0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffe80830000 - 0x00007ffe808cb000 	C:\Users\adamj\.jdks\corretto-17.0.6\bin\msvcp140.dll
+0x00007ffe09b50000 - 0x00007ffe0a768000 	C:\Users\adamj\.jdks\corretto-17.0.6\bin\server\jvm.dll
+0x00007ffeaf030000 - 0x00007ffeaf0df000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffeaf830000 - 0x00007ffeaf8cc000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffeaf8d0000 - 0x00007ffeaf9f6000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe15bf0000 - 0x00007ffe15bf9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffea1db0000 - 0x00007ffea1dd7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffeafa00000 - 0x00007ffeafa6b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffea7ad0000 - 0x00007ffea7ada000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffeac1b0000 - 0x00007ffeac1c2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe80820000 - 0x00007ffe8082a000 	C:\Users\adamj\.jdks\corretto-17.0.6\bin\jimage.dll
+0x00007ffea6d90000 - 0x00007ffea6f74000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe87bf0000 - 0x00007ffe87c24000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffeaea80000 - 0x00007ffeaeb02000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffea9e10000 - 0x00007ffea9e1e000 	C:\Users\adamj\.jdks\corretto-17.0.6\bin\instrument.dll
+0x00007ffe807f0000 - 0x00007ffe80815000 	C:\Users\adamj\.jdks\corretto-17.0.6\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\adamj\.jdks\corretto-17.0.6\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\adamj\.jdks\corretto-17.0.6\bin\server
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=C:\Users\adamj\Desktop\MINECRAFTING\untitled -Djansi.passthrough=true -Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\maven\lib\maven3 -Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\maven\lib\maven3\bin\m2.conf -Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\maven\lib\maven-event-listener.jar -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\lib\idea_rt.jar=54340:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\bin -Dfile.encoding=UTF-8 
+java_command: org.codehaus.classworlds.Launcher -Didea.version=2023.1 package
+java_class_path (initial): C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 5                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 18                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4215275520                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4215275520                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Users\adamj\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\bin;
+USERNAME=adamj
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 183 Stepping 1, GenuineIntel
+TMP=C:\Users\adamj\AppData\Local\Temp
+TEMP=C:\Users\adamj\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.2913)
+OS uptime: 1 days 0:18 hours
+Hyper-V role detected
+
+CPU: total 24 (initial active 24) (12 cores per cpu, 2 threads per core) family 6 model 183 stepping 1 microcode 0x10f, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv
+
+Memory: 4k page, system-wide physical 16072M (1042M free)
+TotalPageFile size 65224M (AvailPageFile size 254M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 81M, peak: 333M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.6+10-LTS) for windows-amd64 JRE (17.0.6+10-LTS), built on Jan 13 2023 22:57:04 by "Administrator" with MS VC++ 15.9 (VS2017)
+
+END.
